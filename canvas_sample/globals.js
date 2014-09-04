@@ -613,11 +613,11 @@ function onSolutionOpen(arg, queryParams) {
 	//var canvas = solutionModel.newForm('designForm');
 	
 	//logo creation
-	var logo = canvas.newLayoutContainer(null);
+	var logo = canvas.newLayoutContainer(null,0,0);
 	logo.elementId = "site-logo";
 	logo.tagType = "h1";
 	
-	var logo1 = logo.newLayoutContainer(null);
+	var logo1 = logo.newLayoutContainer(null,0,0);
 	logo1.tagType = 'a';
 	
 	var logobean = logo1.newBean('logobean','servoycomponents:simplelabel',0,0,100,100);
@@ -626,34 +626,34 @@ function onSolutionOpen(arg, queryParams) {
 	}";
 	
 	// header creation
-	var topbar = canvas.newLayoutContainer(null);
+	var topbar = canvas.newLayoutContainer(null,1,1);
 	topbar.elementId = "header";
 	topbar.tagType = "header";
 	
 	//topbar creation
-	var topbar = canvas.newLayoutContainer('collapse top-bar-collapse');
+	var topbar = canvas.newLayoutContainer('collapse top-bar-collapse',2,2);
 	topbar.elementId = "top-bar";
 	topbar.tagType = "nav";
 	
-	var topbar_left = topbar.newLayoutContainer('nav navbar-nav pull-left');
+	var topbar_left = topbar.newLayoutContainer('nav navbar-nav pull-left',0,0);
 	topbar_left.tagType = 'ul';
-	var home_li = topbar_left.newLayoutContainer(null);
+	var home_li = topbar_left.newLayoutContainer(null,0,0);
 	home_li.tagType = 'li'
 	var homebean = home_li.newBean('homebean','servoycomponents:simplehyperlink',0,0,100,100);
 	homebean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.homebean\"\
 	}";
 	
-	var dropdown_li = topbar_left.newLayoutContainer('dropdown');
+	var dropdown_li = topbar_left.newLayoutContainer('dropdown',1,1);
 	dropdown_li.tagType = 'li'
 	var dropdownbean = dropdown_li.newBean('dropdownbean','servoycomponents:simplehyperlink',0,0,100,100);
 	dropdownbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.dropdownbean\"\
 	}";
 	
-	var topbar_right = topbar.newLayoutContainer('nav navbar-nav pull-right');
+	var topbar_right = topbar.newLayoutContainer('nav navbar-nav pull-right',1,1);
 	topbar_right.tagType = 'ul';
-	var dropdown2_li = topbar_right.newLayoutContainer('dropdown');
+	var dropdown2_li = topbar_right.newLayoutContainer('dropdown',0,0);
 	dropdown2_li.tagType = 'li';
 	var dropdownbean2 = dropdown2_li.newBean('dropdownbean_right','servoycomponents:simplehyperlink',0,0,100,100);
 	dropdownbean2.innerHTML = "{\
@@ -661,7 +661,7 @@ function onSolutionOpen(arg, queryParams) {
 	}";
 	
 	//sidebar creation
-	var sidebar_wrapper = canvas.newLayoutContainer('collapse sidebar-collapse');
+	var sidebar_wrapper = canvas.newLayoutContainer('collapse sidebar-collapse',3,3);
 	sidebar_wrapper.elementId = "sidebar-wrapper";
 	
 	
@@ -671,63 +671,63 @@ function onSolutionOpen(arg, queryParams) {
 	markupId:\"search\"\
 	}";
 	
-	var sidebar = sidebar_wrapper.newLayoutContainer(null);
+	var sidebar = sidebar_wrapper.newLayoutContainer(null,0,0);
 	sidebar.elementId = "sidebar";
 	sidebar.tagType = "div";
-	var sidebar_ul = sidebar.newLayoutContainer('open-active');
+	var sidebar_ul = sidebar.newLayoutContainer('open-active',0,0);
 	sidebar_ul.elementId = "main-nav";
 	sidebar_ul.tagType = 'ul';
 	
-	var li_dashboard = sidebar_ul.newLayoutContainer('active');
+	var li_dashboard = sidebar_ul.newLayoutContainer('active',0,0);
 	li_dashboard.tagType = "li";
 	var dashboard = li_dashboard.newBean('dashboardbean','servoycomponents:simplehyperlink',0,0,100,100);
 	dashboard.innerHTML = "{\
 	dataProviderID:\"scopes.globals.dashboardbean\"\
 	}";
 	
-	var li_example = sidebar_ul.newLayoutContainer('dropdown');
+	var li_example = sidebar_ul.newLayoutContainer('dropdown',1,1);
 	li_example.tagType = "li";
 	var examplebean = li_example.newBean('examplebean','servoycomponents:simplehyperlink',0,0,100,100);
 	examplebean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.examplebean\"\
 	}";
 	
-	var li_formelements = sidebar_ul.newLayoutContainer('dropdown');
+	var li_formelements = sidebar_ul.newLayoutContainer('dropdown',2,2);
 	li_formelements.tagType = "li";
 	var formelements = li_formelements.newBean('formelementsbean','servoycomponents:simplehyperlink',0,0,100,100);
 	formelements.innerHTML = "{\
 	dataProviderID:\"scopes.globals.formelementsbean\"\
 	}";
 	
-	var li_uifeatures = sidebar_ul.newLayoutContainer('dropdown');
+	var li_uifeatures = sidebar_ul.newLayoutContainer('dropdown',3,3);
 	li_uifeatures.tagType = "li";
 	var uifeatures = li_uifeatures.newBean('uifeaturesbean','servoycomponents:simplehyperlink',0,0,100,100);
 	uifeatures.innerHTML = "{\
 	dataProviderID:\"scopes.globals.uifeaturesbean\"\
 	}";
 	
-	var li_tables = sidebar_ul.newLayoutContainer('dropdown');
+	var li_tables = sidebar_ul.newLayoutContainer('dropdown',4,4);
 	li_tables.tagType = "li";
 	var tables = li_tables.newBean('tablesbean','servoycomponents:simplehyperlink',0,0,100,100);
 	tables.innerHTML = "{\
 	dataProviderID:\"scopes.globals.tablesbean\"\
 	}";
 	
-	var li_portlets = sidebar_ul.newLayoutContainer(null);
+	var li_portlets = sidebar_ul.newLayoutContainer(null,5,5);
 	li_portlets.tagType = "li";
 	var portlets = li_portlets.newBean('portletsbean','servoycomponents:simplehyperlink',0,0,100,100);
 	portlets.innerHTML = "{\
 	dataProviderID:\"scopes.globals.portletbean\"\
 	}";
 	
-	var li_charts = sidebar_ul.newLayoutContainer('dropdown');
+	var li_charts = sidebar_ul.newLayoutContainer('dropdown',6,6);
 	li_charts.tagType = "li";
 	var chart = li_charts.newBean('chartbean','servoycomponents:simplehyperlink',0,0,100,100);
 	chart.innerHTML = "{\
 	dataProviderID:\"scopes.globals.chartbean\"\
 	}";
 	
-	var li_pages = sidebar_ul.newLayoutContainer('dropdown');
+	var li_pages = sidebar_ul.newLayoutContainer('dropdown',7,7);
 	li_pages.tagType = "li";
 	var pages = li_pages.newBean('pagesbean','servoycomponents:simplehyperlink',0,0,100,100);
 	pages.innerHTML = "{\
@@ -735,7 +735,7 @@ function onSolutionOpen(arg, queryParams) {
 	}";
 	
 	// content creation
-	var content = canvas.newLayoutContainer(null);
+	var content = canvas.newLayoutContainer(null,4,4);
 	content.elementId = "content";
 	
 	var contentheader = content.newBean('contentheader','servoycomponents:simplelabel',0,0,100,100);
@@ -744,7 +744,7 @@ function onSolutionOpen(arg, queryParams) {
 	markupId:\"content-header\"\
 	}";
 	
-	var contentcontainer =  content.newLayoutContainer(null);
+	var contentcontainer =  content.newLayoutContainer(null,1,1);
 	contentcontainer.elementId = 'content-container';
 	
 	var contentheading = contentcontainer.newBean('contentheading','servoycomponents:simplelabel',0,0,100,100);
@@ -752,39 +752,39 @@ function onSolutionOpen(arg, queryParams) {
 	dataProviderID:\"scopes.globals.contentheadingbean\"\
 	}";
 	
-	var contentrow1 =  contentcontainer.newLayoutContainer('row');
+	var contentrow1 =  contentcontainer.newLayoutContainer('row',1,1);
 	
-	var col1 = contentrow1.newLayoutContainer('col-md-3 col-sm-6');
+	var col1 = contentrow1.newLayoutContainer('col-md-3 col-sm-6',0,0);
 	var neworders = col1.newBean('newordersbean','servoycomponents:simplehyperlink',0,0,100,100);
 	neworders.innerHTML = "{\
 	dataProviderID:\"scopes.globals.newordersbean\",\
 	styleClass:\"dashboard-stat primary\"\
 	}";
 	
-	var col2 = contentrow1.newLayoutContainer('col-md-3 col-sm-6');
+	var col2 = contentrow1.newLayoutContainer('col-md-3 col-sm-6',1,1);
 	var abandonedcarts = col2.newBean('abandonedcartsbean','servoycomponents:simplehyperlink',0,0,100,100);
 	abandonedcarts.innerHTML = "{\
 	dataProviderID:\"scopes.globals.abandonedcartsbean\",\
 	styleClass:\"dashboard-stat secondary\"\
 	}";
 	
-	var col3 = contentrow1.newLayoutContainer('col-md-3 col-sm-6');
+	var col3 = contentrow1.newLayoutContainer('col-md-3 col-sm-6',2,2);
 	var avgsupport = col3.newBean('avgsupportbean','servoycomponents:simplehyperlink',0,0,100,100);
 	avgsupport.innerHTML = "{\
 	dataProviderID:\"scopes.globals.avgsupportbean\",\
 	styleClass:\"dashboard-stat tertiary\"\
 	}";
 	
-	var col4 = contentrow1.newLayoutContainer('col-md-3 col-sm-6');
+	var col4 = contentrow1.newLayoutContainer('col-md-3 col-sm-6',3,3);
 	var totalrevenue = col4.newBean('totalrevenuebean','servoycomponents:simplehyperlink',0,0,100,100);
 	totalrevenue.innerHTML = "{\
 	dataProviderID:\"scopes.globals.totalrevenuebean\",\
 	styleClass:\"dashboard-stat\"\
 	}";
 	
-	var contentrow2 =  contentcontainer.newLayoutContainer('row');
-	col1 = contentrow2.newLayoutContainer('col-md-9');
-	var areacontainer = col1.newLayoutContainer('portlet');
+	var contentrow2 =  contentcontainer.newLayoutContainer('row',2,2);
+	col1 = contentrow2.newLayoutContainer('col-md-9',0,0);
+	var areacontainer = col1.newLayoutContainer('portlet',0,0);
 	
 	var areachartheaderbean = areacontainer.newBean('areachartheader','servoycomponents:simplelabel',0,0,100,100);
 	areachartheaderbean.innerHTML = "{\
@@ -792,103 +792,103 @@ function onSolutionOpen(arg, queryParams) {
 	styleClass:\"portlet-header\"\
 	}";
 	
-	var areachartcontentbean = areacontainer.newBean('areachartcontent','servoycomponents:simplelabel',0,0,100,100);
+	var areachartcontentbean = areacontainer.newBean('areachartcontent','servoycomponents:simplelabel',1,1,100,100);
 	areachartcontentbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.areachartcontent\",\
 	styleClass:\"portlet-content\"\
 	}";
 	
-	var row1 = col1.newLayoutContainer('row');
-	var col12 = row1.newLayoutContainer('col-md-6');
-	var orderscontainer = col12.newLayoutContainer('portlet');
+	var row1 = col1.newLayoutContainer('row',1,1);
+	var col12 = row1.newLayoutContainer('col-md-6',0,0);
+	var orderscontainer = col12.newLayoutContainer('portlet',0,0);
 	var ordersheaderbean = orderscontainer.newBean('ordersheader','servoycomponents:simplelabel',0,0,100,100);
 	ordersheaderbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.ordersheader\",\
 	styleClass:\"portlet-header\"\
 	}";
 	
-	var orderscontentbean = orderscontainer.newBean('orderscontent','servoycomponents:simplelabel',0,0,100,100);
+	var orderscontentbean = orderscontainer.newBean('orderscontent','servoycomponents:simplelabel',1,1,100,100);
 	orderscontentbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.orderscontent\",\
 	styleClass:\"portlet-content\"\
 	}";
 	
-	col2 = row1.newLayoutContainer('col-md-6');
-	var signupscontainer = col2.newLayoutContainer('portlet');
+	col2 = row1.newLayoutContainer('col-md-6',1,1);
+	var signupscontainer = col2.newLayoutContainer('portlet',0,0);
 	var signupsheaderbean = signupscontainer.newBean('signupsheader','servoycomponents:simplelabel',0,0,100,100);
 	signupsheaderbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.signupsheader\",\
 	styleClass:\"portlet-header\"\
 	}";
 	
-	var signupscontentbean = signupscontainer.newBean('signupscontent','servoycomponents:simplelabel',0,0,100,100);
+	var signupscontentbean = signupscontainer.newBean('signupscontent','servoycomponents:simplelabel',1,1,100,100);
 	signupscontentbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.signupscontent\",\
 	styleClass:\"portlet-content\"\
 	}";
 	
-	var calendarcontainer = col1.newLayoutContainer('portlet');
+	var calendarcontainer = col1.newLayoutContainer('portlet',2,2);
 	var calendarheaderbean = calendarcontainer.newBean('calendarheader','servoycomponents:simplelabel',0,0,100,100);
 	calendarheaderbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.calendarheader\",\
 	styleClass:\"portlet-header\"\
 	}";
 	
-	var calendarcontentbean = calendarcontainer.newBean('calendarcontent','servoycomponents:simplelabel',0,0,100,100);
+	var calendarcontentbean = calendarcontainer.newBean('calendarcontent','servoycomponents:simplelabel',1,1,100,100);
 	calendarcontentbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.calendarcontent\",\
 	styleClass:\"portlet-content\"\
 	}";
 	
 	
-	col2 = contentrow2.newLayoutContainer('col-md-3');
+	col2 = contentrow2.newLayoutContainer('col-md-3',1,1);
 	
-	var donutcontainer = col2.newLayoutContainer('portlet');
+	var donutcontainer = col2.newLayoutContainer('portlet',0,0);
 	var donutheaderbean = donutcontainer.newBean('donutheader','servoycomponents:simplelabel',0,0,100,100);
 	donutheaderbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.donutheader\",\
 	styleClass:\"portlet-header\"\
 	}";
 	
-	var donutcontentbean = donutcontainer.newBean('donutcontent','servoycomponents:simplelabel',0,0,100,100);
+	var donutcontentbean = donutcontainer.newBean('donutcontent','servoycomponents:simplelabel',1,1,100,100);
 	donutcontentbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.donutcontent\",\
 	styleClass:\"portlet-content\"\
 	}";
 	
-	var traficcontainer = col2.newLayoutContainer('portlet');
+	var traficcontainer = col2.newLayoutContainer('portlet',1,1);
 	var traficheaderbean = traficcontainer.newBean('traficheader','servoycomponents:simplelabel',0,0,100,100);
 	traficheaderbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.traficheader\",\
 	styleClass:\"portlet-header\"\
 	}";
 	
-	var traficcontentbean = traficcontainer.newBean('traficcontent','servoycomponents:simplelabel',0,0,100,100);
+	var traficcontentbean = traficcontainer.newBean('traficcontent','servoycomponents:simplelabel',1,1,100,100);
 	traficcontentbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.traficcontent\",\
 	styleClass:\"portlet-content\"\
 	}";
 	
-	var sparklinecontainer = col2.newLayoutContainer('portlet');
+	var sparklinecontainer = col2.newLayoutContainer('portlet',2,2);
 	var sparklineheaderbean = sparklinecontainer.newBean('sparklineheader','servoycomponents:simplelabel',0,0,100,100);
 	sparklineheaderbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.sparklineheader\",\
 	styleClass:\"portlet-header\"\
 	}";
 	
-	var sparklinecontentbean = sparklinecontainer.newBean('sparklinecontent','servoycomponents:simplelabel',0,0,100,100);
+	var sparklinecontentbean = sparklinecontainer.newBean('sparklinecontent','servoycomponents:simplelabel',1,1,100,100);
 	sparklinecontentbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.sparklinecontent\",\
 	styleClass:\"portlet-content\"\
 	}";
 	
 	// footer creation
-	var footer = canvas.newLayoutContainer(null);
+	var footer = canvas.newLayoutContainer(null,5,5);
 	footer.elementId = "footer";
 	footer.tagType = "footer";
-	var footer_ul = footer.newLayoutContainer('nav pull-right');
+	var footer_ul = footer.newLayoutContainer('nav pull-right',0,0);
 	footer_ul.tagType = "ul";
-	var footer_li = footer_ul.newLayoutContainer('');
+	var footer_li = footer_ul.newLayoutContainer(null,0,0);
 	footer_li.tagType = "li";
 	var footerbean = footer_li.newBean('footercontent','servoycomponents:simplelabel',0,0,100,100);
 	footerbean.innerHTML = "{\

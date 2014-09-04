@@ -3,6 +3,7 @@
 	<name>canvas_sample</name>
 	<comment></comment>
 	<projects>
+		<project>resources</project>
 		<project>resources123</project>
 	</projects>
 	<buildSpec>
