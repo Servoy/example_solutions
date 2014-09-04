@@ -1,0 +1,16 @@
+dataSource:"db:/example_data/orders",
+encapsulation:60,
+items:[
+{
+height:99,
+partType:5,
+typeid:19,
+uuid:"AC4D6E01-DA9E-496C-AE76-FB036FAC6EB2"
+}
+],
+name:"runtimeForm",
+navigatorID:"-1",
+showInMenu:true,
+size:"103,480",
+typeid:3,
+uuid:"D44107D1-EB7B-414C-B064-79C84AC45C83"
