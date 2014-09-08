@@ -869,18 +869,18 @@ function onSolutionOpen(arg, queryParams) {
 	styleClass:\"portlet-content\"\
 	}";
 	
-	var sparklinecontainer = col2.newLayoutContainer('portlet',2,2);
-	var sparklineheaderbean = sparklinecontainer.newBean('sparklineheader','servoycomponents:simplelabel',0,0,100,100);
-	sparklineheaderbean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.sparklineheader\",\
-	styleClass:\"portlet-header\"\
-	}";
-	
-	var sparklinecontentbean = sparklinecontainer.newBean('sparklinecontent','servoycomponents:simplelabel',1,1,100,100);
-	sparklinecontentbean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.sparklinecontent\",\
-	styleClass:\"portlet-content\"\
-	}";
+//	var sparklinecontainer = col2.newLayoutContainer('portlet',2,2);
+//	var sparklineheaderbean = sparklinecontainer.newBean('sparklineheader','servoycomponents:simplelabel',0,0,100,100);
+//	sparklineheaderbean.innerHTML = "{\
+//	dataProviderID:\"scopes.globals.sparklineheader\",\
+//	styleClass:\"portlet-header\"\
+//	}";
+//	
+//	var sparklinecontentbean = sparklinecontainer.newBean('sparklinecontent','servoycomponents:simplelabel',1,1,100,100);
+//	sparklinecontentbean.innerHTML = "{\
+//	dataProviderID:\"scopes.globals.sparklinecontent\",\
+//	styleClass:\"portlet-content\"\
+//	}";
 	
 	// footer creation
 	var footer = canvas.newLayoutContainer(null,5,5);
