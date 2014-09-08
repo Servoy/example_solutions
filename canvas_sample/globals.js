@@ -792,11 +792,13 @@ function onSolutionOpen(arg, queryParams) {
 	styleClass:\"portlet-header\"\
 	}";
 	
-	var areachartcontentbean = areacontainer.newBean('areachartcontent','servoycomponents:simplelabel',1,1,100,100);
-	areachartcontentbean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.areachartcontent\",\
-	styleClass:\"portlet-content\"\
-	}";
+//	var areachartcontentbean = areacontainer.newBean('areachartcontent','servoycomponents:simplelabel',1,1,100,100);
+//	areachartcontentbean.innerHTML = "{\
+//	dataProviderID:\"scopes.globals.areachartcontent\",\
+//	styleClass:\"portlet-content\"\
+//	}";
+	
+	var areachartcontentbean = areacontainer.newBean('areachartcontent','canvascomponents:areachart',1,1,100,100);
 	
 	var row1 = col1.newLayoutContainer('row',1,1);
 	var col12 = row1.newLayoutContainer('col-md-6',0,0);
