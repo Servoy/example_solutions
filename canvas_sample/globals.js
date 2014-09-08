@@ -48,21 +48,21 @@ var dashboardbean = '<i class="fa fa-dashboard"></i>Dashboard'
  *
  * @properties={typeid:35,uuid:"4E0C3FC7-9E21-4B37-A393-5B6AD6B10706"}
  */
-var examplebean = '<i class="fa fa-file-text"></i>Example Pages'
+var examplebean = '<i class="fa fa-file-text"></i>Example Pages<span class="caret"></span>'
 	
 /**
  * @type {String}
  *
  * @properties={typeid:35,uuid:"4DE270FF-EA38-4E22-A7EF-871FFC8608DA"}
  */
-var formelementsbean = '<i class="fa fa-tasks"></i>Form Elements'
+var formelementsbean = '<i class="fa fa-tasks"></i>Form Elements<span class="caret"></span>'
 	
 /**
  * @type {String}
  *
  * @properties={typeid:35,uuid:"E00E6ED4-31F7-4BAF-AA64-6E8912C4BA26"}
  */
-var uifeaturesbean = '<i class="fa fa-desktop"></i>UI Features'
+var uifeaturesbean = '<i class="fa fa-desktop"></i>UI Features<span class="caret"></span>'
 
 
 /**
@@ -70,7 +70,7 @@ var uifeaturesbean = '<i class="fa fa-desktop"></i>UI Features'
  *
  * @properties={typeid:35,uuid:"36B6C4C7-0719-45A2-B5FC-B9748ED36A71"}
  */
-var tablesbean = '<i class="fa fa-table"></i>Tables'
+var tablesbean = '<i class="fa fa-table"></i>Tables<span class="caret"></span>'
 	
 /**
  * @type {String}
@@ -84,14 +84,14 @@ var portletbean = '<i class="fa fa-list-alt"></i>Portlets'
  *
  * @properties={typeid:35,uuid:"37BE159F-CC92-4148-9B98-7BBB9944FA55"}
  */
-var chartbean = '<i class="fa fa-bar-chart-o"></i>Charts & Graphs'
+var chartbean = '<i class="fa fa-bar-chart-o"></i>Charts & Graphs<span class="caret"></span>'
 	
 /**
  * @type {String}
  *
  * @properties={typeid:35,uuid:"7B91A1B2-4E36-497C-877C-71B0D91E9ACA"}
  */
-var pagesbean = '<i class="fa fa-file-text-o"></i>Extra Pages'
+var pagesbean = '<i class="fa fa-file-text-o"></i>Extra Pages<span class="caret"></span>'
 
 /**
  * @type {String}
