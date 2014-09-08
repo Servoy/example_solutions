@@ -828,17 +828,17 @@ function onSolutionOpen(arg, queryParams) {
 	}";
 	
 	var calendarcontainer = col1.newLayoutContainer('portlet',2,2);
-	var calendarheaderbean = calendarcontainer.newBean('calendarheader','servoycomponents:simplelabel',0,0,100,100);
-	calendarheaderbean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.calendarheader\",\
-	styleClass:\"portlet-header\"\
-	}";
-	
-	var calendarcontentbean = calendarcontainer.newBean('calendarcontent','servoycomponents:simplelabel',1,1,100,100);
-	calendarcontentbean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.calendarcontent\",\
-	styleClass:\"portlet-content\"\
-	}";
+//	var calendarheaderbean = calendarcontainer.newBean('calendarheader','servoycomponents:simplelabel',0,0,100,100);
+//	calendarheaderbean.innerHTML = "{\
+//	dataProviderID:\"scopes.globals.calendarheader\",\
+//	styleClass:\"portlet-header\"\
+//	}";
+//	
+//	var calendarcontentbean = calendarcontainer.newBean('calendarcontent','servoycomponents:simplelabel',1,1,100,100);
+//	calendarcontentbean.innerHTML = "{\
+//	dataProviderID:\"scopes.globals.calendarcontent\",\
+//	styleClass:\"portlet-content\"\
+//	}";
 	
 	
 	col2 = contentrow2.newLayoutContainer('col-md-3',1,1);
