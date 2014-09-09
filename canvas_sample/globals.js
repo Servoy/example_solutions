@@ -749,10 +749,11 @@ function onSolutionOpen(arg, queryParams) {
 	
 	var contentheading = contentcontainer.newBean('contentheading','canvascomponents:simplelabel',0,0,100,100);
 	contentheading.innerHTML = "{\
-	dataProviderID:\"scopes.globals.contentheadingbean\"\
+	dataProviderID:\"scopes.globals.contentheadingbean\",\
+	markupId:\"salestats\"\
 	}";
 	
-	var contentrow1 =  contentcontainer.newLayoutContainer('row',1,1);
+	var contentrow1 =  contentcontainer.newLayoutContainer('row',2,2);
 	
 	var col1 = contentrow1.newLayoutContainer('col-md-3 col-sm-6',0,0);
 	var neworders = col1.newBean('newordersbean','canvascomponents:simplehyperlink',0,0,100,100);
@@ -782,7 +783,7 @@ function onSolutionOpen(arg, queryParams) {
 	styleClass:\"dashboard-stat\"\
 	}";
 	
-	var contentrow2 =  contentcontainer.newLayoutContainer('row',2,2);
+	var contentrow2 =  contentcontainer.newLayoutContainer('row',3,3);
 	col1 = contentrow2.newLayoutContainer('col-md-9',0,0);
 	var areacontainer = col1.newLayoutContainer('portlet',0,0);
 	
