@@ -671,7 +671,7 @@ function onSolutionOpen(arg, queryParams) {
 	markupId:\"search\"\
 	}";
 	
-	var sidebar = sidebar_wrapper.newLayoutContainer(null,0,0);
+	var sidebar = sidebar_wrapper.newLayoutContainer(null,1,1);
 	sidebar.elementId = "sidebar";
 	sidebar.tagType = "div";
 	var sidebar_ul = sidebar.newLayoutContainer('open-active',0,0);
