@@ -497,59 +497,6 @@ var traficheader = '<h3>\
 								Traffic Overview\
 							</h3>';
 
-
-/**
- * @type {String}
- *
- * @properties={typeid:35,uuid:"C6BB837B-EB09-46FF-9120-A4E21A35C06B"}
- */
-var traficcontent = '<div class="progress-stat">\
-								<div class="stat-header">\
-									<div class="stat-label">\
-										% New Visits\
-									</div>\
-									<div class="stat-value">\
-										77.7%\
-									</div>\
-								</div>\
-								<div class="progress progress-striped active">\
-								  <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%">\
-								    <span class="sr-only">77.74% Visit Rate</span>\
-								  </div>\
-								</div>\
-							</div>\
-							<div class="progress-stat">\
-								<div class="stat-header">\
-									<div class="stat-label">\
-										% Mobile Visitors\
-									</div>\
-									<div class="stat-value">\
-										33.2%\
-									</div>\
-								</div>\
-								<div class="progress progress-striped active">\
-								  <div class="progress-bar progress-bar-tertiary" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%">\
-								    <span class="sr-only">33% Mobile Visitors</span>\
-								  </div>\
-								</div>\
-							</div>\
-							<div class="progress-stat">\
-								<div class="stat-header">\
-									<div class="stat-label">\
-										Bounce Rate\
-									</div>\
-									<div class="stat-value">\
-										42.7%\
-									</div>\
-								</div>\
-								<div class="progress progress-striped active">\
-								  <div class="progress-bar progress-bar-secondary" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100" style="width: 42%">\
-								    <span class="sr-only">42.7% Bounce Rate</span>\
-								  </div>\
-								</div>\
-							</div>\
-							<br\>';
-
 /**
  * @type {String}
  *
@@ -866,11 +813,14 @@ function onSolutionOpen(arg, queryParams) {
 	styleClass:\"portlet-header\"\
 	}";
 	
-	var traficcontentbean = traficcontainer.newBean('traficcontent','canvascomponents:simplelabel',1,1,100,100);
-	traficcontentbean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.traficcontent\",\
-	styleClass:\"portlet-content\"\
-	}";
+	var traficcontentcontainer = traficcontainer.newLayoutContainer('traficcontent',1,1);
+	traficcontentcontainer.cssClasses="portlet-content";
+	var progress1 = traficcontentcontainer.newBean('progress1','canvascomponents:canvas-progressbar',10,10,90,30)
+	progress1.innerHTML = "{styleClass:\"progress-bar-primary\",value:77.7,label:\"% New Visits\"\}";
+	var progress2 = traficcontentcontainer.newBean('progress2','canvascomponents:canvas-progressbar',10,40,90,30)
+	progress2.innerHTML = "{styleClass:\"progress-bar-tertiary\",value:33.2,label:\"% Mobile Visitors\"\}";
+	var progress3 = traficcontentcontainer.newBean('progress3','canvascomponents:canvas-progressbar',10,70,90,30)
+	progress3.innerHTML = "{styleClass:\"progress-bar-secondary\",value:42.7,label:\"Bounce Rate\"\}";
 	
 //	var sparklinecontainer = col2.newLayoutContainer('portlet',2,2);
 //	var sparklineheaderbean = sparklinecontainer.newBean('sparklineheader','canvascomponents:simplelabel',0,0,100,100);
