@@ -1,6 +1,6 @@
 body {
   color: #444;
-  font: 13px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif;
+  font: 13px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif !important;
   background: #666666 url(http://preview.jumpstartthemes.com/canvas-admin/img/layout/sidebar-bg.png) repeat-y 0 0;
 }
 h1,
