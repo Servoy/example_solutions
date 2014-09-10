@@ -654,6 +654,7 @@ uuid:"A1B29B3B-4D33-4488-B789-5F3321A0E355"
 }
 ],
 name:"designForm",
+navigatorID:"-1",
 size:"0,0",
 typeid:3,
 uuid:"7D5E0668-8188-4A7F-8C7E-C2FE7E89740E"
