@@ -734,11 +734,18 @@ function onSolutionOpen(arg, queryParams) {
 	col1 = contentrow2.newLayoutContainer('col-md-9',0,0);
 	var areacontainer = col1.newLayoutContainer('portlet',0,0);
 	
-	var areachartheaderbean = areacontainer.newBean('areachartheader','canvascomponents:simplelabel',0,0,100,100);
+//	var areachartheaderbean = areacontainer.newBean('areachartheader','canvascomponents:simplelabel',0,0,100,100);
+//	areachartheaderbean.innerHTML = "{\
+//	dataProviderID:\"scopes.globals.areachartheader\",\
+//	styleClass:\"portlet-header\"\
+//	}";
+	
+	var areachartheaderbean = areacontainer.newBean('areachartheader','canvascomponents:portletheader',0,0,100,100);
 	areachartheaderbean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.areachartheader\",\
-	styleClass:\"portlet-header\"\
-	}";
+		headerText:\"Area Chart\",\
+		iconStyleClass:\"fa fa-bar-chart-o\",\
+		buttonVisible: false\
+		}";
 	
 //	var areachartcontentbean = areacontainer.newBean('areachartcontent','canvascomponents:simplelabel',1,1,100,100);
 //	areachartcontentbean.innerHTML = "{\
@@ -751,11 +758,20 @@ function onSolutionOpen(arg, queryParams) {
 	var row1 = col1.newLayoutContainer('row',1,1);
 	var col12 = row1.newLayoutContainer('col-md-6',0,0);
 	var orderscontainer = col12.newLayoutContainer('portlet',0,0);
-	var ordersheaderbean = orderscontainer.newBean('ordersheader','canvascomponents:simplelabel',0,0,100,100);
+	
+	var ordersheaderbean = orderscontainer.newBean('ordersheader','canvascomponents:portletheader',0,0,100,100);
 	ordersheaderbean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.ordersheader\",\
-	styleClass:\"portlet-header\"\
-	}";
+		headerText:\"Recent Orders\",\
+		iconStyleClass:\"fa fa-money\",\
+		buttonVisible: true,\
+		buttonText: \"Add Order\"\
+		}";
+	
+//	var ordersheaderbean = orderscontainer.newBean('ordersheader','canvascomponents:simplelabel',0,0,100,100);
+//	ordersheaderbean.innerHTML = "{\
+//	dataProviderID:\"scopes.globals.ordersheader\",\
+//	styleClass:\"portlet-header\"\
+//	}";
 	
 	var orderscontentbean = orderscontainer.newBean('orderscontent','canvascomponents:simplelabel',1,1,100,100);
 	orderscontentbean.innerHTML = "{\
@@ -765,11 +781,20 @@ function onSolutionOpen(arg, queryParams) {
 	
 	col2 = row1.newLayoutContainer('col-md-6',1,1);
 	var signupscontainer = col2.newLayoutContainer('portlet',0,0);
-	var signupsheaderbean = signupscontainer.newBean('signupsheader','canvascomponents:simplelabel',0,0,100,100);
+	
+	var signupsheaderbean = signupscontainer.newBean('signupsheader','canvascomponents:portletheader',0,0,100,100);
 	signupsheaderbean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.signupsheader\",\
-	styleClass:\"portlet-header\"\
-	}";
+		headerText:\"Recent Signups\",\
+		iconStyleClass:\"fa fa-group\",\
+		buttonVisible: true,\
+		buttonText: \"Add User\"\
+		}";
+	
+//	var signupsheaderbean = signupscontainer.newBean('signupsheader','canvascomponents:simplelabel',0,0,100,100);
+//	signupsheaderbean.innerHTML = "{\
+//	dataProviderID:\"scopes.globals.signupsheader\",\
+//	styleClass:\"portlet-header\"\
+//	}";
 	
 	var signupscontentbean = signupscontainer.newBean('signupscontent','canvascomponents:simplelabel',1,1,100,100);
 	signupscontentbean.innerHTML = "{\
@@ -794,11 +819,19 @@ function onSolutionOpen(arg, queryParams) {
 	col2 = contentrow2.newLayoutContainer('col-md-3',1,1);
 	
 	var donutcontainer = col2.newLayoutContainer('portlet',0,0);
-	var donutheaderbean = donutcontainer.newBean('donutheader','canvascomponents:simplelabel',0,0,100,100);
+	
+	var donutheaderbean = donutcontainer.newBean('donutheader','canvascomponents:portletheader',0,0,100,100);
 	donutheaderbean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.donutheader\",\
-	styleClass:\"portlet-header\"\
-	}";
+		headerText:\"Donut Chart\",\
+		iconStyleClass:\"fa fa-bar-chart-o\",\
+		buttonVisible: false\
+		}";
+	
+//	var donutheaderbean = donutcontainer.newBean('donutheader','canvascomponents:simplelabel',0,0,100,100);
+//	donutheaderbean.innerHTML = "{\
+//	dataProviderID:\"scopes.globals.donutheader\",\
+//	styleClass:\"portlet-header\"\
+//	}";
 	
 	var donutcontentbean = donutcontainer.newBean('donutcontent','canvascomponents:simplelabel',1,1,100,100);
 	donutcontentbean.innerHTML = "{\
@@ -807,11 +840,19 @@ function onSolutionOpen(arg, queryParams) {
 	}";
 	
 	var traficcontainer = col2.newLayoutContainer('portlet',1,1);
-	var traficheaderbean = traficcontainer.newBean('traficheader','canvascomponents:simplelabel',0,0,100,100);
+	
+	var traficheaderbean = traficcontainer.newBean('traficheader','canvascomponents:portletheader',0,0,100,100);
 	traficheaderbean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.traficheader\",\
-	styleClass:\"portlet-header\"\
-	}";
+		headerText:\"Traffic Overview\",\
+		iconStyleClass:\"fa fa-compass\",\
+		buttonVisible: false\
+		}";
+	
+//	var traficheaderbean = traficcontainer.newBean('traficheader','canvascomponents:simplelabel',0,0,100,100);
+//	traficheaderbean.innerHTML = "{\
+//	dataProviderID:\"scopes.globals.traficheader\",\
+//	styleClass:\"portlet-header\"\
+//	}";
 	
 	var traficcontentcontainer = traficcontainer.newLayoutContainer('traficcontent',1,1);
 	traficcontentcontainer.cssClasses="portlet-content";
