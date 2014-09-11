@@ -39,63 +39,6 @@ var searchbean = '<form><input class="form-control input-sm" type="text" name="s
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"07291EB3-4016-4F27-A894-434DE6EE79A0"}
- */
-var dashboardbean = '<i class="fa fa-dashboard"></i>Dashboard'
-
-/**
- * @type {String}
- *
- * @properties={typeid:35,uuid:"4E0C3FC7-9E21-4B37-A393-5B6AD6B10706"}
- */
-var examplebean = '<i class="fa fa-file-text"></i>Example Pages<span class="caret"></span>'
-	
-/**
- * @type {String}
- *
- * @properties={typeid:35,uuid:"4DE270FF-EA38-4E22-A7EF-871FFC8608DA"}
- */
-var formelementsbean = '<i class="fa fa-tasks"></i>Form Elements<span class="caret"></span>'
-	
-/**
- * @type {String}
- *
- * @properties={typeid:35,uuid:"E00E6ED4-31F7-4BAF-AA64-6E8912C4BA26"}
- */
-var uifeaturesbean = '<i class="fa fa-desktop"></i>UI Features<span class="caret"></span>'
-
-
-/**
- * @type {String}
- *
- * @properties={typeid:35,uuid:"36B6C4C7-0719-45A2-B5FC-B9748ED36A71"}
- */
-var tablesbean = '<i class="fa fa-table"></i>Tables<span class="caret"></span>'
-	
-/**
- * @type {String}
- *
- * @properties={typeid:35,uuid:"DD2BA67A-7ADC-483A-A733-D95B74B83E6F"}
- */
-var portletbean = '<i class="fa fa-list-alt"></i>Portlets'
-	
-/**
- * @type {String}
- *
- * @properties={typeid:35,uuid:"37BE159F-CC92-4148-9B98-7BBB9944FA55"}
- */
-var chartbean = '<i class="fa fa-bar-chart-o"></i>Charts & Graphs<span class="caret"></span>'
-	
-/**
- * @type {String}
- *
- * @properties={typeid:35,uuid:"7B91A1B2-4E36-497C-877C-71B0D91E9ACA"}
- */
-var pagesbean = '<i class="fa fa-file-text-o"></i>Extra Pages<span class="caret"></span>'
-
-/**
- * @type {String}
- *
  * @properties={typeid:35,uuid:"CB0A060B-D006-41B4-9DA3-1D43CE424B69"}
  */
 var contentheaderbean = '<h1>Dashboard</h1>';
@@ -621,66 +564,9 @@ function onSolutionOpen(arg, queryParams) {
 	var sidebar = sidebar_wrapper.newLayoutContainer(null,1,1);
 	sidebar.elementId = "sidebar";
 	sidebar.tagType = "div";
-	var sidebar_ul = sidebar.newLayoutContainer('open-active',0,0);
-	sidebar_ul.elementId = "main-nav";
-	sidebar_ul.tagType = 'ul';
 	
-	var li_dashboard = sidebar_ul.newLayoutContainer('active',0,0);
-	li_dashboard.tagType = "li";
-	var dashboard = li_dashboard.newBean('dashboardbean','canvascomponents:simplehyperlink',0,0,100,100);
-	dashboard.innerHTML = "{\
-	dataProviderID:\"scopes.globals.dashboardbean\"\
-	}";
-	
-	var li_example = sidebar_ul.newLayoutContainer('dropdown',1,1);
-	li_example.tagType = "li";
-	var examplebean = li_example.newBean('examplebean','canvascomponents:simplehyperlink',0,0,100,100);
-	examplebean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.examplebean\"\
-	}";
-	
-	var li_formelements = sidebar_ul.newLayoutContainer('dropdown',2,2);
-	li_formelements.tagType = "li";
-	var formelements = li_formelements.newBean('formelementsbean','canvascomponents:simplehyperlink',0,0,100,100);
-	formelements.innerHTML = "{\
-	dataProviderID:\"scopes.globals.formelementsbean\"\
-	}";
-	
-	var li_uifeatures = sidebar_ul.newLayoutContainer('dropdown',3,3);
-	li_uifeatures.tagType = "li";
-	var uifeatures = li_uifeatures.newBean('uifeaturesbean','canvascomponents:simplehyperlink',0,0,100,100);
-	uifeatures.innerHTML = "{\
-	dataProviderID:\"scopes.globals.uifeaturesbean\"\
-	}";
-	
-	var li_tables = sidebar_ul.newLayoutContainer('dropdown',4,4);
-	li_tables.tagType = "li";
-	var tables = li_tables.newBean('tablesbean','canvascomponents:simplehyperlink',0,0,100,100);
-	tables.innerHTML = "{\
-	dataProviderID:\"scopes.globals.tablesbean\"\
-	}";
-	
-	var li_portlets = sidebar_ul.newLayoutContainer(null,5,5);
-	li_portlets.tagType = "li";
-	var portlets = li_portlets.newBean('portletsbean','canvascomponents:simplehyperlink',0,0,100,100);
-	portlets.innerHTML = "{\
-	dataProviderID:\"scopes.globals.portletbean\"\
-	}";
-	
-	var li_charts = sidebar_ul.newLayoutContainer('dropdown',6,6);
-	li_charts.tagType = "li";
-	var chart = li_charts.newBean('chartbean','canvascomponents:simplehyperlink',0,0,100,100);
-	chart.innerHTML = "{\
-	dataProviderID:\"scopes.globals.chartbean\"\
-	}";
-	
-	var li_pages = sidebar_ul.newLayoutContainer('dropdown',7,7);
-	li_pages.tagType = "li";
-	var pages = li_pages.newBean('pagesbean','canvascomponents:simplehyperlink',0,0,100,100);
-	pages.innerHTML = "{\
-	dataProviderID:\"scopes.globals.pagesbean\"\
-	}";
-	
+	sidebar.newBean('menubarbean','canvascomponents:menubar',0,0,100,100);
+
 	// content creation
 	var content = canvas.newLayoutContainer(null,4,4);
 	content.elementId = "content";
