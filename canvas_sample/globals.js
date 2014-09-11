@@ -1,3 +1,30 @@
+/**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"F33D0AFC-D526-48BD-858F-F3250FC1E01C"}
+ */
+var ordersboxvalue = "1,236";
+
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"B52702BE-C90A-4DD1-81A0-656029ED64FB",variableType:4}
+ */
+var abandonedboxvalue = 256;
+
+/**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"C2192179-4FDD-446F-874F-06C3A2E2FF42"}
+ */
+var avgsupportvalue = "4:37"
+	
+/**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"A603F050-D57A-4196-BE7B-816E14C00990"}
+ */
+var totalrevenuevalue = "$173K"
 
 /**
  * @type {String}
@@ -589,31 +616,42 @@ function onSolutionOpen(arg, queryParams) {
 	var contentrow1 =  contentcontainer.newLayoutContainer('row',2,2);
 	
 	var col1 = contentrow1.newLayoutContainer('col-md-3 col-sm-6',0,0);
-	var neworders = col1.newBean('newordersbean','canvascomponents:simplehyperlink',0,0,100,100);
+	var neworders = col1.newBean('neworders','canvascomponents:box',0,0,100,100);
 	neworders.innerHTML = "{\
-	dataProviderID:\"scopes.globals.newordersbean\",\
-	styleClass:\"dashboard-stat primary\"\
+	title:\"new orders\",\
+	bgstyle:\"primary\",\
+	nextstyle:\"fa-play-circle more\",\
+	bgimagestyle:\"fa-star\"\,\
+	value:\"globals.ordersboxvalue\"\
 	}";
 	
 	var col2 = contentrow1.newLayoutContainer('col-md-3 col-sm-6',1,1);
-	var abandonedcarts = col2.newBean('abandonedcartsbean','canvascomponents:simplehyperlink',0,0,100,100);
+	var abandonedcarts = col2.newBean('abandonedcarts','canvascomponents:box',0,0,100,100);
 	abandonedcarts.innerHTML = "{\
-	dataProviderID:\"scopes.globals.abandonedcartsbean\",\
-	styleClass:\"dashboard-stat secondary\"\
+	title:\"ABANDONED CARTS\",\
+	bgstyle:\"secondary\",\
+	nextstyle:\"fa-play-circle more\",\
+	bgimagestyle:\"fa-shopping-cart\"\,\
+	value:\"globals.abandonedboxvalue\"\
 	}";
 	
 	var col3 = contentrow1.newLayoutContainer('col-md-3 col-sm-6',2,2);
-	var avgsupport = col3.newBean('avgsupportbean','canvascomponents:simplehyperlink',0,0,100,100);
+	var avgsupport = col3.newBean('avgsupport','canvascomponents:box',0,0,100,100);
 	avgsupport.innerHTML = "{\
-	dataProviderID:\"scopes.globals.avgsupportbean\",\
-	styleClass:\"dashboard-stat tertiary\"\
+	title:\"AVG. SUPPORT TIME\",\
+	bgstyle:\"tertiary\",\
+	nextstyle:\"fa-play-circle more\",\
+	bgimagestyle:\"fa-clock-o\"\,\
+	value:\"globals.avgsupportvalue\"\
 	}";
 	
 	var col4 = contentrow1.newLayoutContainer('col-md-3 col-sm-6',3,3);
-	var totalrevenue = col4.newBean('totalrevenuebean','canvascomponents:simplehyperlink',0,0,100,100);
+	var totalrevenue = col4.newBean('totalrevenue','canvascomponents:box',0,0,100,100);
 	totalrevenue.innerHTML = "{\
-	dataProviderID:\"scopes.globals.totalrevenuebean\",\
-	styleClass:\"dashboard-stat\"\
+	title:\"TOTAL REVENUE\",\
+	nextstyle:\"fa-play-circle more\",\
+	bgimagestyle:\"fa-money\"\,\
+	value:\"globals.totalrevenuevalue\"\
 	}";
 	
 	var contentrow2 =  contentcontainer.newLayoutContainer('row',3,3);
