@@ -456,6 +456,10 @@ var donutheader = '<h3>\
  */
 var donutcontent = '<div id="donut-chart" class="chart-holder" style="height: 250px"><svg height="250" version="1.1" width="266" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.75px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#e5412d" d="M133,201.66666666666669A76.66666666666667,76.66666666666667,0,0,0,209.66666643020739,125.00602138591319" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#e5412d" stroke="#ffffff" d="M133,204.66666666666669A79.66666666666667,79.66666666666667,0,0,0,212.66666642095464,125.00625700536196L242.99999966073233,125.00863937978848A110,110,0,0,1,133,235Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#f0ad4e" d="M209.66666643020739,125.00602138591319A76.66666666666667,76.66666666666667,0,0,0,72.79544110129612,77.53223340423237" stroke-width="2" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#f0ad4e" stroke="#ffffff" d="M212.66666642095464,125.00625700536196A79.66666666666667,79.66666666666667,0,0,0,70.43961053569467,75.6747990591806L42.693161651944195,53.798350106348565A115,115,0,0,1,247.99999964531108,125.00903207886978Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#444444" d="M72.79544110129612,77.53223340423237A76.66666666666667,76.66666666666667,0,0,0,85.527505095641,185.20083060335116" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#444444" stroke="#ffffff" d="M70.43961053569467,75.6747990591806A79.66666666666667,79.66666666666667,0,0,0,83.66988572981828,187.5565152791345L64.88728991983275,211.37510477872127A110,110,0,0,1,46.61954592794662,56.894074014768194Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#888888" d="M85.527505095641,185.20083060335116A76.66666666666667,76.66666666666667,0,0,0,132.9759144567186,201.66666288331825" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#888888" stroke="#ffffff" d="M83.66988572981828,187.5565152791345A79.66666666666667,79.66666666666667,0,0,0,132.97497197893804,204.6666627352742L132.9654424813789,234.99999457171748A110,110,0,0,1,64.88728991983275,211.37510477872127Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="133" y="115" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: 800; font-size: 15px; line-height: normal; font-family: Arial;" font-size="15px" font-weight="800" transform="matrix(2.0909,0,0,2.0909,-145.0909,-135.2727)" stroke-width="0.4782608695652174"><tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Referrals</tspan></text><text x="133" y="135" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-family: Arial;" font-size="14px" transform="matrix(1.5972,0,0,1.5972,-79.4306,-75.8472)" stroke-width="0.6260869565217391"><tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">40%</tspan></text></svg></div>'
 	
+/**
+ * @properties={typeid:35,uuid:"BEF7AB3F-296D-42C8-9D0D-34AB2BB1E080",variableType:-4}
+ */
+var donutdata = {data:[{label: "Direct", value: 25}, {label: "Referrals", value: 40}, {label: "Search engines", value: 25}, {label: "Unique visitors", value: 10}], colors:["#e5412d", "#f0ad4e", "#444444", "#888888"]};
 
 /**
  * @type {String}
@@ -757,11 +761,17 @@ function onSolutionOpen(arg, queryParams) {
 //	styleClass:\"portlet-header\"\
 //	}";
 	
-	var donutcontentbean = donutcontainer.newBean('donutcontent','canvascomponents:simplelabel',1,1,100,100);
+//	var donutcontentbean = donutcontainer.newBean('donutcontent','canvascomponents:simplelabel',1,1,100,100);
+//	donutcontentbean.innerHTML = "{\
+//	dataProviderID:\"scopes.globals.donutcontent\",\
+//	styleClass:\"portlet-content\"\
+//	}";
+	
+	var donutcontentbean = donutcontainer.newBean('donutcontent','canvascomponents:donutchart',1,1,100,100);
 	donutcontentbean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.donutcontent\",\
+	dataProviderID:\"scopes.globals.donutdata\",\
 	styleClass:\"portlet-content\"\
-	}";
+	}";		
 	
 	var traficcontainer = col2.newLayoutContainer('portlet',1,1);
 	
