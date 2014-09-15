@@ -596,7 +596,7 @@ function onSolutionOpen(arg, queryParams) {
 	sidebar.elementId = "sidebar";
 	sidebar.tagType = "div";
 	
-	sidebar.newBean('menubarbean','canvascomponents:menubar',0,0,100,100);
+	sidebar.newBean('menubarbean','canvascomponents:menu',0,0,100,100);
 
 	// content creation
 	var content = canvas.newLayoutContainer(null,4,4);
