@@ -533,8 +533,14 @@ function onSolutionOpen(arg, queryParams) {
 	var canvas = solutionModel.getForm('runtimeForm');
 	//var canvas = solutionModel.newForm('designForm');
 	
-	//logo creation
-	var logo = canvas.newLayoutContainer(null,0,0);
+	var navbar = canvas.newLayoutContainer("header",0,0);
+	navbar.elementId = "header"
+	navbar.tagType = "div";
+	
+	var container_fluid = navbar.newLayoutContainer("container-fluid",0,0);
+	container_fluid.tagType = "div";
+	
+	var logo = container_fluid.newLayoutContainer(null,0,0);
 	logo.elementId = "site-logo";
 	logo.tagType = "h1";
 	
@@ -543,18 +549,28 @@ function onSolutionOpen(arg, queryParams) {
 	
 	var logobean = logo1.newBean('logobean','canvascomponents:simplelabel',0,0,100,100);
 	logobean.innerHTML = "{\
+	styleClass:\"navbar-header\",\
 	dataProviderID:\"scopes.globals.logourl\"\
 	}";
+	var navbar_options = container_fluid.newBean('topmenubean','canvascomponents:topmenu',0,0,100,100);
+	//var navbar_collapse = container_fluid.newLayoutContainer("navbar-collapse",0,0);
+
+	
+//	var logobean = logo1.newBean('logobean','canvascomponents:simplelabel',0,0,100,100);
+//	logobean.innerHTML = "{\
+//	dataProviderID:\"scopes.globals.logourl\"\
+//	}";
 	
 	// header creation
-	var topbar = canvas.newLayoutContainer(null,1,1);
-	topbar.elementId = "header";
-	topbar.tagType = "header";
+//	var topbar = canvas.newLayoutContainer(null,1,1);
+//	topbar.elementId = "header";
+//	topbar.tagType = "header";
 	
 	//topbar creation
-	var topbar = canvas.newLayoutContainer('collapse top-bar-collapse',2,2);
+	var topbar = canvas.newLayoutContainer('top-bar-collapse collapse',2,2);
 	topbar.elementId = "top-bar";
 	topbar.tagType = "nav";
+	topbar.style ="height: auto;";
 	
 	var topbar_left = topbar.newLayoutContainer('nav navbar-nav pull-left',0,0);
 	topbar_left.tagType = 'ul';
