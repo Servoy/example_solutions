@@ -533,69 +533,74 @@ function onSolutionOpen(arg, queryParams) {
 	var canvas = solutionModel.getForm('runtimeForm');
 	//var canvas = solutionModel.newForm('designForm');
 	
-	var navbar = canvas.newLayoutContainer("header",0,0);
-	navbar.elementId = "header"
-	navbar.tagType = "div";
-	
-	var container_fluid = navbar.newLayoutContainer("container-fluid",0,0);
-	container_fluid.tagType = "div";
-	
-	var logo = container_fluid.newLayoutContainer(null,0,0);
+	//logo creation
+	var logo = canvas.newLayoutContainer(null,0,0);
 	logo.elementId = "site-logo";
 	logo.tagType = "h1";
 	
-	var logo1 = logo.newLayoutContainer(null,0,0);
-	logo1.tagType = 'a';
 	
-	var logobean = logo1.newBean('logobean','canvascomponents:simplelabel',0,0,100,100);
+	var logobean = logo.newBean('logobean','canvascomponents:logo',0,0,100,100);
 	logobean.innerHTML = "{\
-	styleClass:\"navbar-header\",\
-	dataProviderID:\"scopes.globals.logourl\"\
+	url:\"http://preview.jumpstartthemes.com/canvas-admin/img/logos/logo.png\"\
 	}";
-	var navbar_options = container_fluid.newBean('topmenubean','canvascomponents:topmenu',0,0,100,100);
-	//var navbar_collapse = container_fluid.newLayoutContainer("navbar-collapse",0,0);
-
-	
-//	var logobean = logo1.newBean('logobean','canvascomponents:simplelabel',0,0,100,100);
-//	logobean.innerHTML = "{\
-//	dataProviderID:\"scopes.globals.logourl\"\
-//	}";
 	
 	// header creation
-//	var topbar = canvas.newLayoutContainer(null,1,1);
-//	topbar.elementId = "header";
-//	topbar.tagType = "header";
+	var topbar = canvas.newLayoutContainer(null,1,1);
+	topbar.elementId = "header";
+	topbar.tagType = "header";
+	
+	var topbarcollapse = topbar.newBean('topbarcollapse','canvascomponents:collapseicon',0,0,100,100);
+	topbarcollapse.innerHTML = "{\
+	markupId:\"top-bar-toogle\",\
+	target:\".top-bar-collapse\",\
+	iconClass:\"fa fa-cog\"\
+	}";
+	
+	var sidebarcollapse = topbar.newBean('sidebarcollapse','canvascomponents:collapseicon',1,1,100,100);
+	sidebarcollapse.innerHTML = "{\
+	markupId:\"sidebar-toogle\",\
+	target:\".sidebar-collapse\",\
+	iconClass:\"fa fa-reorder\"\
+	}";
 	
 	//topbar creation
-	var topbar = canvas.newLayoutContainer('top-bar-collapse collapse',2,2);
+	var topbar = canvas.newLayoutContainer('collapse top-bar-collapse',2,2);
 	topbar.elementId = "top-bar";
 	topbar.tagType = "nav";
-	topbar.style ="height: auto;";
 	
 	var topbar_left = topbar.newLayoutContainer('nav navbar-nav pull-left',0,0);
 	topbar_left.tagType = 'ul';
 	var home_li = topbar_left.newLayoutContainer(null,0,0);
 	home_li.tagType = 'li'
-	var homebean = home_li.newBean('homebean','canvascomponents:simplehyperlink',0,0,100,100);
+	
+	var homebean = home_li.newBean('homebean','canvascomponents:menuitem',0,0,100,100);
 	homebean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.homebean\"\
+	text:\"Home\",\
+	url:\"javascript:;\",\
+	leftIconClass:\"fa fa-home\"\
 	}";
 	
 	var dropdown_li = topbar_left.newLayoutContainer('dropdown',1,1);
-	dropdown_li.tagType = 'li'
-	var dropdownbean = dropdown_li.newBean('dropdownbean','canvascomponents:simplehyperlink',0,0,100,100);
+	dropdown_li.tagType = 'li';
+	
+	var dropdownbean = dropdown_li.newBean('dropdownbean','canvascomponents:menuitem',0,0,100,100);
 	dropdownbean.innerHTML = "{\
-	dataProviderID:\"scopes.globals.dropdownbean\"\
-	}";
+		text:\"Dropdown\",\
+		url:\"javascript:;\",\
+		rightIconClass:\"caret\"\
+		}";
 	
 	var topbar_right = topbar.newLayoutContainer('nav navbar-nav pull-right',1,1);
 	topbar_right.tagType = 'ul';
 	var dropdown2_li = topbar_right.newLayoutContainer('dropdown',0,0);
 	dropdown2_li.tagType = 'li';
-	var dropdownbean2 = dropdown2_li.newBean('dropdownbean_right','canvascomponents:simplehyperlink',0,0,100,100);
+	var dropdownbean2 = dropdown2_li.newBean('dropdownbean_right','canvascomponents:menuitem',0,0,100,100);
 	dropdownbean2.innerHTML = "{\
-	dataProviderID:\"scopes.globals.dropdownbean_right\"\
-	}";
+		text:\"Rod Howard\",\
+		rightIconClass:\"caret\",\
+		url:\"javascript:;\",\
+		leftIconClass:\"fa fa-user\"\
+		}";
 	
 	//sidebar creation
 	var sidebar_wrapper = canvas.newLayoutContainer('collapse sidebar-collapse',3,3);
