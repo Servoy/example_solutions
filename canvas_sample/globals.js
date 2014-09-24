@@ -515,7 +515,7 @@ var sparklinecontent = '<div class="row row-marginless">\
  *
  * @properties={typeid:35,uuid:"47160A09-3517-40DA-B2BD-A150D3AD143F"}
  */
-var footercontent = 'Copyright © 2013, Jumpstart Themes.';
+var footercontent = 'Copyright © 2014, Servoy.';
 
 /**
  * Callback method for when solution is opened.
