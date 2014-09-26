@@ -533,6 +533,8 @@ function onSolutionOpen(arg, queryParams) {
 	var canvas = solutionModel.getForm('runtimeForm');
 	//var canvas = solutionModel.newForm('designForm');
 	
+	canvas.navigator = SM_DEFAULTS.NONE;
+	
 	//logo creation
 	var logo = canvas.newLayoutContainer(null,0,0);
 	logo.elementId = "site-logo";
