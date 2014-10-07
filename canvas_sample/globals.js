@@ -541,7 +541,7 @@ function onSolutionOpen(arg, queryParams) {
 	logo.tagType = "h1";
 	
 	
-	var logobean = logo.newBean('logobean','canvascomponents:logo',0,0,100,100);
+	var logobean = logo.newBean('logobean','canvascomponents-logo',0,0,100,100);
 	logobean.innerHTML = "{\
 	url:\"http://preview.jumpstartthemes.com/canvas-admin/img/logos/logo.png\"\
 	}";
@@ -551,14 +551,14 @@ function onSolutionOpen(arg, queryParams) {
 	topbar.elementId = "header";
 	topbar.tagType = "header";
 	
-	var topbarcollapse = topbar.newBean('topbarcollapse','canvascomponents:collapseicon',0,0,100,100);
+	var topbarcollapse = topbar.newBean('topbarcollapse','canvascomponents-collapseicon',0,0,100,100);
 	topbarcollapse.innerHTML = "{\
 	markupId:\"top-bar-toogle\",\
 	target:\".top-bar-collapse\",\
 	iconClass:\"fa fa-cog\"\
 	}";
 	
-	var sidebarcollapse = topbar.newBean('sidebarcollapse','canvascomponents:collapseicon',1,1,100,100);
+	var sidebarcollapse = topbar.newBean('sidebarcollapse','canvascomponents-collapseicon',1,1,100,100);
 	sidebarcollapse.innerHTML = "{\
 	markupId:\"sidebar-toogle\",\
 	target:\".sidebar-collapse\",\
@@ -575,7 +575,7 @@ function onSolutionOpen(arg, queryParams) {
 	var home_li = topbar_left.newLayoutContainer(null,0,0);
 	home_li.tagType = 'li'
 	
-	var homebean = home_li.newBean('homebean','canvascomponents:menuitem',0,0,100,100);
+	var homebean = home_li.newBean('homebean','canvascomponents-menuitem',0,0,100,100);
 	homebean.innerHTML = "{\
 	text:\"Home\",\
 	url:\"javascript:;\",\
@@ -585,7 +585,7 @@ function onSolutionOpen(arg, queryParams) {
 	var dropdown_li = topbar_left.newLayoutContainer('dropdown',1,1);
 	dropdown_li.tagType = 'li';
 	
-	var dropdownbean = dropdown_li.newBean('dropdownbean','canvascomponents:menuitem',0,0,100,100);
+	var dropdownbean = dropdown_li.newBean('dropdownbean','canvascomponents-menuitem',0,0,100,100);
 	dropdownbean.innerHTML = "{\
 		text:\"Dropdown\",\
 		url:\"javascript:;\",\
@@ -596,7 +596,7 @@ function onSolutionOpen(arg, queryParams) {
 	topbar_right.tagType = 'ul';
 	var dropdown2_li = topbar_right.newLayoutContainer('dropdown',0,0);
 	dropdown2_li.tagType = 'li';
-	var dropdownbean2 = dropdown2_li.newBean('dropdownbean_right','canvascomponents:menuitem',0,0,100,100);
+	var dropdownbean2 = dropdown2_li.newBean('dropdownbean_right','canvascomponents-menuitem',0,0,100,100);
 	dropdownbean2.innerHTML = "{\
 		text:\"Rod Howard\",\
 		rightIconClass:\"caret\",\
@@ -609,7 +609,7 @@ function onSolutionOpen(arg, queryParams) {
 	sidebar_wrapper.elementId = "sidebar-wrapper";
 	
 	
-	var searchbean = sidebar_wrapper.newBean('searchbar','canvascomponents:simplelabel',0,0,100,100);
+	var searchbean = sidebar_wrapper.newBean('searchbar','canvascomponents-simplelabel',0,0,100,100);
 	searchbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.searchbean\",\
 	markupId:\"search\"\
@@ -619,13 +619,13 @@ function onSolutionOpen(arg, queryParams) {
 	sidebar.elementId = "sidebar";
 	sidebar.tagType = "div";
 	
-	sidebar.newBean('menubarbean','canvascomponents:menu',0,0,100,100);
+	sidebar.newBean('menubarbean','canvascomponents-menu',0,0,100,100);
 
 	// content creation
 	var content = canvas.newLayoutContainer(null,4,4);
 	content.elementId = "content";
 	
-	var contentheader = content.newBean('contentheader','canvascomponents:simplelabel',0,0,100,100);
+	var contentheader = content.newBean('contentheader','canvascomponents-simplelabel',0,0,100,100);
 	contentheader.innerHTML = "{\
 	dataProviderID:\"scopes.globals.contentheaderbean\",\
 	markupId:\"content-header\"\
@@ -634,7 +634,7 @@ function onSolutionOpen(arg, queryParams) {
 	var contentcontainer =  content.newLayoutContainer(null,1,1);
 	contentcontainer.elementId = 'content-container';
 	
-	var contentheading = contentcontainer.newBean('contentheading','canvascomponents:simplelabel',0,0,100,100);
+	var contentheading = contentcontainer.newBean('contentheading','canvascomponents-simplelabel',0,0,100,100);
 	contentheading.innerHTML = "{\
 	dataProviderID:\"scopes.globals.contentheadingbean\",\
 	markupId:\"salestats\"\
@@ -643,7 +643,7 @@ function onSolutionOpen(arg, queryParams) {
 	var contentrow1 =  contentcontainer.newLayoutContainer('row',2,2);
 	
 	var col1 = contentrow1.newLayoutContainer('col-md-3 col-sm-6',0,0);
-	var neworders = col1.newBean('neworders','canvascomponents:box',0,0,100,100);
+	var neworders = col1.newBean('neworders','canvascomponents-box',0,0,100,100);
 	neworders.innerHTML = "{\
 	title:\"new orders\",\
 	bgstyle:\"primary\",\
@@ -653,7 +653,7 @@ function onSolutionOpen(arg, queryParams) {
 	}";
 	
 	var col2 = contentrow1.newLayoutContainer('col-md-3 col-sm-6',1,1);
-	var abandonedcarts = col2.newBean('abandonedcarts','canvascomponents:box',0,0,100,100);
+	var abandonedcarts = col2.newBean('abandonedcarts','canvascomponents-box',0,0,100,100);
 	abandonedcarts.innerHTML = "{\
 	title:\"ABANDONED CARTS\",\
 	bgstyle:\"secondary\",\
@@ -663,7 +663,7 @@ function onSolutionOpen(arg, queryParams) {
 	}";
 	
 	var col3 = contentrow1.newLayoutContainer('col-md-3 col-sm-6',2,2);
-	var avgsupport = col3.newBean('avgsupport','canvascomponents:box',0,0,100,100);
+	var avgsupport = col3.newBean('avgsupport','canvascomponents-box',0,0,100,100);
 	avgsupport.innerHTML = "{\
 	title:\"AVG. SUPPORT TIME\",\
 	bgstyle:\"tertiary\",\
@@ -673,7 +673,7 @@ function onSolutionOpen(arg, queryParams) {
 	}";
 	
 	var col4 = contentrow1.newLayoutContainer('col-md-3 col-sm-6',3,3);
-	var totalrevenue = col4.newBean('totalrevenue','canvascomponents:box',0,0,100,100);
+	var totalrevenue = col4.newBean('totalrevenue','canvascomponents-box',0,0,100,100);
 	totalrevenue.innerHTML = "{\
 	title:\"TOTAL REVENUE\",\
 	nextstyle:\"fa-play-circle more\",\
@@ -685,32 +685,32 @@ function onSolutionOpen(arg, queryParams) {
 	col1 = contentrow2.newLayoutContainer('col-md-9',0,0);
 	var areacontainer = col1.newLayoutContainer('portlet',0,0);
 	
-//	var areachartheaderbean = areacontainer.newBean('areachartheader','canvascomponents:simplelabel',0,0,100,100);
+//	var areachartheaderbean = areacontainer.newBean('areachartheader','canvascomponents-simplelabel',0,0,100,100);
 //	areachartheaderbean.innerHTML = "{\
 //	dataProviderID:\"scopes.globals.areachartheader\",\
 //	styleClass:\"portlet-header\"\
 //	}";
 	
-	var areachartheaderbean = areacontainer.newBean('areachartheader','canvascomponents:portletheader',0,0,100,100);
+	var areachartheaderbean = areacontainer.newBean('areachartheader','canvascomponents-portletheader',0,0,100,100);
 	areachartheaderbean.innerHTML = "{\
 		headerText:\"Area Chart\",\
 		iconStyleClass:\"fa fa-bar-chart-o\",\
 		buttonVisible: false\
 		}";
 	
-//	var areachartcontentbean = areacontainer.newBean('areachartcontent','canvascomponents:simplelabel',1,1,100,100);
+//	var areachartcontentbean = areacontainer.newBean('areachartcontent','canvascomponents-simplelabel',1,1,100,100);
 //	areachartcontentbean.innerHTML = "{\
 //	dataProviderID:\"scopes.globals.areachartcontent\",\
 //	styleClass:\"portlet-content\"\
 //	}";
 	
-	var areachartcontentbean = areacontainer.newBean('areachartcontent','canvascomponents:areachart',1,1,100,100);
+	var areachartcontentbean = areacontainer.newBean('areachartcontent','canvascomponents-areachart',1,1,100,100);
 	
 	var row1 = col1.newLayoutContainer('row',1,1);
 	var col12 = row1.newLayoutContainer('col-md-6',0,0);
 	var orderscontainer = col12.newLayoutContainer('portlet',0,0);
 	
-	var ordersheaderbean = orderscontainer.newBean('ordersheader','canvascomponents:portletheader',0,0,100,100);
+	var ordersheaderbean = orderscontainer.newBean('ordersheader','canvascomponents-portletheader',0,0,100,100);
 	ordersheaderbean.innerHTML = "{\
 		headerText:\"Recent Orders\",\
 		iconStyleClass:\"fa fa-money\",\
@@ -718,13 +718,13 @@ function onSolutionOpen(arg, queryParams) {
 		buttonText: \"Add Order\"\
 		}";
 	
-//	var ordersheaderbean = orderscontainer.newBean('ordersheader','canvascomponents:simplelabel',0,0,100,100);
+//	var ordersheaderbean = orderscontainer.newBean('ordersheader','canvascomponents-simplelabel',0,0,100,100);
 //	ordersheaderbean.innerHTML = "{\
 //	dataProviderID:\"scopes.globals.ordersheader\",\
 //	styleClass:\"portlet-header\"\
 //	}";
 	
-	var orderscontentbean = orderscontainer.newBean('orderscontent','canvascomponents:simplelabel',1,1,100,100);
+	var orderscontentbean = orderscontainer.newBean('orderscontent','canvascomponents-simplelabel',1,1,100,100);
 	orderscontentbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.orderscontent\",\
 	styleClass:\"portlet-content\"\
@@ -733,7 +733,7 @@ function onSolutionOpen(arg, queryParams) {
 	col2 = row1.newLayoutContainer('col-md-6',1,1);
 	var signupscontainer = col2.newLayoutContainer('portlet',0,0);
 	
-	var signupsheaderbean = signupscontainer.newBean('signupsheader','canvascomponents:portletheader',0,0,100,100);
+	var signupsheaderbean = signupscontainer.newBean('signupsheader','canvascomponents-portletheader',0,0,100,100);
 	signupsheaderbean.innerHTML = "{\
 		headerText:\"Recent Signups\",\
 		iconStyleClass:\"fa fa-group\",\
@@ -741,26 +741,26 @@ function onSolutionOpen(arg, queryParams) {
 		buttonText: \"Add User\"\
 		}";
 	
-//	var signupsheaderbean = signupscontainer.newBean('signupsheader','canvascomponents:simplelabel',0,0,100,100);
+//	var signupsheaderbean = signupscontainer.newBean('signupsheader','canvascomponents-simplelabel',0,0,100,100);
 //	signupsheaderbean.innerHTML = "{\
 //	dataProviderID:\"scopes.globals.signupsheader\",\
 //	styleClass:\"portlet-header\"\
 //	}";
 	
-	var signupscontentbean = signupscontainer.newBean('signupscontent','canvascomponents:simplelabel',1,1,100,100);
+	var signupscontentbean = signupscontainer.newBean('signupscontent','canvascomponents-simplelabel',1,1,100,100);
 	signupscontentbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.signupscontent\",\
 	styleClass:\"portlet-content\"\
 	}";
 	
 	var calendarcontainer = col1.newLayoutContainer('portlet',2,2);
-//	var calendarheaderbean = calendarcontainer.newBean('calendarheader','canvascomponents:simplelabel',0,0,100,100);
+//	var calendarheaderbean = calendarcontainer.newBean('calendarheader','canvascomponents-simplelabel',0,0,100,100);
 //	calendarheaderbean.innerHTML = "{\
 //	dataProviderID:\"scopes.globals.calendarheader\",\
 //	styleClass:\"portlet-header\"\
 //	}";
 //	
-//	var calendarcontentbean = calendarcontainer.newBean('calendarcontent','canvascomponents:simplelabel',1,1,100,100);
+//	var calendarcontentbean = calendarcontainer.newBean('calendarcontent','canvascomponents-simplelabel',1,1,100,100);
 //	calendarcontentbean.innerHTML = "{\
 //	dataProviderID:\"scopes.globals.calendarcontent\",\
 //	styleClass:\"portlet-content\"\
@@ -771,26 +771,26 @@ function onSolutionOpen(arg, queryParams) {
 	
 	var donutcontainer = col2.newLayoutContainer('portlet',0,0);
 	
-	var donutheaderbean = donutcontainer.newBean('donutheader','canvascomponents:portletheader',0,0,100,100);
+	var donutheaderbean = donutcontainer.newBean('donutheader','canvascomponents-portletheader',0,0,100,100);
 	donutheaderbean.innerHTML = "{\
 		headerText:\"Donut Chart\",\
 		iconStyleClass:\"fa fa-bar-chart-o\",\
 		buttonVisible: false\
 		}";
 	
-//	var donutheaderbean = donutcontainer.newBean('donutheader','canvascomponents:simplelabel',0,0,100,100);
+//	var donutheaderbean = donutcontainer.newBean('donutheader','canvascomponents-simplelabel',0,0,100,100);
 //	donutheaderbean.innerHTML = "{\
 //	dataProviderID:\"scopes.globals.donutheader\",\
 //	styleClass:\"portlet-header\"\
 //	}";
 	
-//	var donutcontentbean = donutcontainer.newBean('donutcontent','canvascomponents:simplelabel',1,1,100,100);
+//	var donutcontentbean = donutcontainer.newBean('donutcontent','canvascomponents-simplelabel',1,1,100,100);
 //	donutcontentbean.innerHTML = "{\
 //	dataProviderID:\"scopes.globals.donutcontent\",\
 //	styleClass:\"portlet-content\"\
 //	}";
 	
-	var donutcontentbean = donutcontainer.newBean('donutcontent','canvascomponents:donutchart',1,1,100,100);
+	var donutcontentbean = donutcontainer.newBean('donutcontent','canvascomponents-donutchart',1,1,100,100);
 	donutcontentbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.donutdata\",\
 	styleClass:\"portlet-content\"\
@@ -798,14 +798,14 @@ function onSolutionOpen(arg, queryParams) {
 	
 	var traficcontainer = col2.newLayoutContainer('portlet',1,1);
 	
-	var traficheaderbean = traficcontainer.newBean('traficheader','canvascomponents:portletheader',0,0,100,100);
+	var traficheaderbean = traficcontainer.newBean('traficheader','canvascomponents-portletheader',0,0,100,100);
 	traficheaderbean.innerHTML = "{\
 		headerText:\"Traffic Overview\",\
 		iconStyleClass:\"fa fa-compass\",\
 		buttonVisible: false\
 		}";
 	
-//	var traficheaderbean = traficcontainer.newBean('traficheader','canvascomponents:simplelabel',0,0,100,100);
+//	var traficheaderbean = traficcontainer.newBean('traficheader','canvascomponents-simplelabel',0,0,100,100);
 //	traficheaderbean.innerHTML = "{\
 //	dataProviderID:\"scopes.globals.traficheader\",\
 //	styleClass:\"portlet-header\"\
@@ -813,21 +813,21 @@ function onSolutionOpen(arg, queryParams) {
 	
 	var traficcontentcontainer = traficcontainer.newLayoutContainer('traficcontent',1,1);
 	traficcontentcontainer.cssClasses="portlet-content";
-	var progress1 = traficcontentcontainer.newBean('progress1','canvascomponents:canvas-progressbar',10,10,90,30)
+	var progress1 = traficcontentcontainer.newBean('progress1','canvascomponents-canvas-progressbar',10,10,90,30)
 	progress1.innerHTML = "{styleClass:\"progress-bar-primary\",value:77.7,label:\"% New Visits\"\}";
-	var progress2 = traficcontentcontainer.newBean('progress2','canvascomponents:canvas-progressbar',10,40,90,30)
+	var progress2 = traficcontentcontainer.newBean('progress2','canvascomponents-canvas-progressbar',10,40,90,30)
 	progress2.innerHTML = "{styleClass:\"progress-bar-tertiary\",value:33.2,label:\"% Mobile Visitors\"\}";
-	var progress3 = traficcontentcontainer.newBean('progress3','canvascomponents:canvas-progressbar',10,70,90,30)
+	var progress3 = traficcontentcontainer.newBean('progress3','canvascomponents-canvas-progressbar',10,70,90,30)
 	progress3.innerHTML = "{styleClass:\"progress-bar-secondary\",value:42.7,label:\"Bounce Rate\"\}";
 	
 //	var sparklinecontainer = col2.newLayoutContainer('portlet',2,2);
-//	var sparklineheaderbean = sparklinecontainer.newBean('sparklineheader','canvascomponents:simplelabel',0,0,100,100);
+//	var sparklineheaderbean = sparklinecontainer.newBean('sparklineheader','canvascomponents-simplelabel',0,0,100,100);
 //	sparklineheaderbean.innerHTML = "{\
 //	dataProviderID:\"scopes.globals.sparklineheader\",\
 //	styleClass:\"portlet-header\"\
 //	}";
 //	
-//	var sparklinecontentbean = sparklinecontainer.newBean('sparklinecontent','canvascomponents:simplelabel',1,1,100,100);
+//	var sparklinecontentbean = sparklinecontainer.newBean('sparklinecontent','canvascomponents-simplelabel',1,1,100,100);
 //	sparklinecontentbean.innerHTML = "{\
 //	dataProviderID:\"scopes.globals.sparklinecontent\",\
 //	styleClass:\"portlet-content\"\
@@ -841,7 +841,7 @@ function onSolutionOpen(arg, queryParams) {
 	footer_ul.tagType = "ul";
 	var footer_li = footer_ul.newLayoutContainer(null,0,0);
 	footer_li.tagType = "li";
-	var footerbean = footer_li.newBean('footercontent','canvascomponents:simplelabel',0,0,100,100);
+	var footerbean = footer_li.newBean('footercontent','canvascomponents-simplelabel',0,0,100,100);
 	footerbean.innerHTML = "{\
 	dataProviderID:\"scopes.globals.footercontent\"\
 	}";
