@@ -1,7 +1,6 @@
 angular.module('canvascomponentsBox',['servoy']).directive('canvascomponentsBox', function() {  
     return {
       restrict: 'E',
-      transclude: true,
       scope: {
         model: "=svyModel",
        	handlers: "=svyHandlers"

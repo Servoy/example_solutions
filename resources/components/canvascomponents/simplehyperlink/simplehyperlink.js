@@ -1,7 +1,6 @@
 angular.module('canvascomponentsSimplehyperlink',['servoy']).directive('canvascomponentsSimplehyperlink', function() {  
     return {
       restrict: 'E',
-      transclude: true,
       scope: {
         model: "=svyModel",
        	handlers: "=svyHandlers"

@@ -1,7 +1,6 @@
 angular.module('canvascomponentsDonutchart',['servoy']).directive('canvascomponentsDonutchart', function($window) {  
     return {
       restrict: 'E',
-      transclude: true,
       scope: {
     	  model: "=svyModel",
       },      
