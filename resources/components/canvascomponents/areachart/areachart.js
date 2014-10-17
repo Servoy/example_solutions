@@ -1,7 +1,6 @@
 angular.module('canvascomponentsAreachart',['servoy']).directive('canvascomponentsAreachart', function() {  
     return {
       restrict: 'E',
-      transclude: true,
       controller: function($scope, $element, $attrs) {
     	  var area = function(){
     		  $('#area-chart').empty ();

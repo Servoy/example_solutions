@@ -1,7 +1,6 @@
 angular.module('canvascomponentsSimplelabel',['servoy']).directive('canvascomponentsSimplelabel', function() {  
     return {
       restrict: 'E',
-      transclude: true,
       scope: {
         model: "=svyModel",
        	handlers: "=svyHandlers"
