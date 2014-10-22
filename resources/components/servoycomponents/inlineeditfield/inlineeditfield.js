@@ -1,4 +1,4 @@
-angular.module('servoycomponentsInlineeditfield',['servoy']).directive('w', function($timeout) {  
+angular.module('servoycomponentsInlineeditfield',['servoy']).directive('servoycomponentsInlineeditfield', function($timeout) {  
     return {
       restrict: 'E',
       scope: {
