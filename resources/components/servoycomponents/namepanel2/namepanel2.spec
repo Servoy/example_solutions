@@ -7,7 +7,7 @@
 		"bgcolor": "color",
 		"buttontext": {"type":"string", "default":"button"},
 		"tooltiptext": "string",
-		"complexmodel": "complextype",
+		"complexmodel": {"type":"complextype", "droppable":true},
 		"size" : {"type" :"dimension",  "default" : {"width":230, "height":120}}
 	},
 	"handlers":
@@ -16,10 +16,8 @@
 	},
 	"types": {
 	  "complextype": {
-	  	"model": {
 	  		"firstNameDataprovider": { "type":"dataprovider"},
 	  		"lastNameDataprovider": "tagstring"
-	  	}
 	  }
 	}
  }
