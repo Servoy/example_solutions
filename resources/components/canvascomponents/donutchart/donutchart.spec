@@ -1,6 +1,7 @@
 {
 	"name": "canvascomponents-donutchart",
 	"displayName": "DonutChart",
+	"version": 1,
 	"definition": "canvascomponents/donutchart/donutchart.js",
 	"libraries": [
 		{"name":"raphael","version":"2.1.0","url":"http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js","mimetype":"text/javascript"},

@@ -1,6 +1,7 @@
 {
 	"name": "canvascomponents-box",
 	"displayName": "Box",
+	"version": 1,
 	"definition": "canvascomponents/box/box.js",
 	"libraries":  [{"name":"font-awesome.css", "version":"4.2.0", "url":"//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css", "mimetype":"text/css"}],
 	"model":

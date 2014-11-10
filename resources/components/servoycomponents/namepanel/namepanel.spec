@@ -1,6 +1,7 @@
 {
 	"name": "servoycomponents-namepanel",
 	"displayName": "Name panel",
+	"version": 1,
 	"definition": "servoycomponents/namepanel/namepanel.js",
 	"model":
 	{
