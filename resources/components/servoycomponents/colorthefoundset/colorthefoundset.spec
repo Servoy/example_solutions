@@ -6,6 +6,6 @@
 	"libraries": [{"name":"colorthefoundset.css", "version":"1", "url":"servoycomponents/colorthefoundset/css/colorthefoundset.css", "mimetype":"text/css"}],
 	"model":
 	{
-		"foundsetToShow": "foundset"
+		"foundsetToShow": { "type": "foundset", "dataproviders": ["name", "age", "imagem", "imageurl"] }
 	}
 }
