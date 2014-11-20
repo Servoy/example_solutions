@@ -1,0 +1,17 @@
+<div svy-border='model.borderType' style="width: 100%; height: 100%; position: absolute">
+	<b>{{model.titleText}}</b>
+	<div style="top:0px; width: 98%; height: 49%; position: absolute">
+		<svy-component-wrapper tagname="model.childComponent1.componentDirectiveName"
+			name="model.childComponent1.name"
+			svy-model="model.childComponent1.model"
+			svy-api="model.childComponent1.api"
+			svy-handlers="model.childComponent1.handlers"
+			svy-apply="model.childComponent1.apply"
+			svy-servoyApi="model.childComponent1.servoyApi">
+		</svy-component-wrapper>
+	</div>
+	<div style="bottom:0px; width: 98%; height: 49%; position: absolute">
+		<svy-component-wrapper component-property-value="model.childComponent2">
+		</svy-component-wrapper>
+	</div>
+</div>
