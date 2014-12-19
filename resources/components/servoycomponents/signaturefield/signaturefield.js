@@ -3,7 +3,7 @@ angular.module('servoycomponentsSignaturefield',['servoy']).directive('servoycom
            restrict : 'E',
            scope : {
         	   model: '=svyModel',
-        	   svyApply: '='
+        	   svyServoyApi: '=svyServoyapi'
            },
            templateUrl : 'servoycomponents/signaturefield/signaturefield.html',
            controller: function($scope, $element, $attrs, $parse) {
@@ -14,7 +14,7 @@ angular.module('servoycomponentsSignaturefield',['servoy']).directive('servoycom
                   	 $scope.$apply(function () {
                   		 $scope.model.signatureValue = $scope.signatureApi.getSignatureString();
                   	 });
-                  	 $scope.svyApply('signatureValue');
+                  	 $scope.svyServoyApi.apply('signatureValue');
                    }
                };
                

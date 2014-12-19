@@ -4,7 +4,6 @@ angular.module('servoycomponentsColorthefoundset',['servoy']).directive('servoyc
       transclude: true,
       scope: {
     	  model: "=svyModel",
-    	  svyApply: '='
       },
       link: function($scope, $element, $attrs) {
          $scope.$watch('model.foundsetToShow.serverSize', function (newValue) {

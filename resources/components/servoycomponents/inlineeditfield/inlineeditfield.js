@@ -3,7 +3,7 @@ angular.module('servoycomponentsInlineeditfield',['servoy']).directive('servoyco
       restrict: 'E',
       scope: {
     	  model: "=svyModel",
-    	  svyApply: '='
+          svyServoyApi: "=svyServoyapi"
       },
       link: function($scope, $element, $attrs) {
          $scope.editModel = {}
@@ -20,7 +20,7 @@ angular.module('servoycomponentsInlineeditfield',['servoy']).directive('servoyco
          $scope.applyChanges = function(){
         	isMouseDownOnButton = false;
             $scope.model.dataproviderid = $scope.editModel;
-            $scope.svyApply('dataproviderid');
+            $scope.svyServoyApi.apply('dataproviderid');
             $scope.exitEditMode();
          };
          /* used to detect if a click is being done on "ok" or "cancel" */
