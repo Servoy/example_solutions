@@ -1,45 +1,46 @@
-angular.module('servoycomponentsSignaturefield',['servoy']).directive('servoycomponentsSignaturefield', function() {
-        return {
-           restrict : 'E',
-           scope : {
-        	   model: '=svyModel',
-        	   svyServoyApi: '=svyServoyapi'
-           },
-           templateUrl : 'servoycomponents/signaturefield/signaturefield.html',
-           controller: function($scope, $element, $attrs, $parse) {
-               var options = {
-                   drawOnly : true,
-                   lineColour : "#fff",
-                    onDrawEnd: function() {
-                  	 $scope.$apply(function () {
-                  		 $scope.model.signatureValue = $scope.signatureApi.getSignatureString();
-                  	 });
-                  	 $scope.svyServoyApi.apply('signatureValue');
-                   }
-               };
-               
-               $scope.$watch('model.signatureValue', function() {
-                   if($scope.model.signatureValue) $scope.signatureApi.regenerate($scope.model.signatureValue);
-                   else $scope.signatureApi.clearCanvas();
-               })
-               
-               $scope.$watch(function() {
-                    return $element.find('canvas').attr('width');
-               }, function() {
-                    if($scope.model.signatureValue) $scope.signatureApi.regenerate($scope.model.signatureValue);
-               })
+angular.module('servoycomponentsSignaturefield', ['servoy']).directive('servoycomponentsSignaturefield', function() {
+		return {
+			restrict: 'E',
+			scope: {
+				model: '=svyModel',
+				svyServoyApi: '=svyServoyapi'
+			},
+			templateUrl: 'servoycomponents/signaturefield/signaturefield.html',
+			controller: function($scope, $element, $attrs, $parse) {
+				var options = {
+					drawOnly: true,
+					lineColour: "#fff",
+					onDrawEnd: function() {
+						$scope.$apply(function() {
+							$scope.model.signatureValue = $scope.signatureApi.getSignatureString();
+						});
+						$scope.svyServoyApi.apply('signatureValue');
+					}
+				};
 
-               $scope.$watch(function() {
-                    return $element.find('canvas').attr('height');
-               }, function() {
-                    if($scope.model.signatureValue) $scope.signatureApi.regenerate($scope.model.signatureValue);
-               })
-               
-               $scope.signatureApi = $element.signaturePad(options);
-               
-               $scope.clear = function() {
-            	   $scope.model.signatureValue = null;
-               }
-           }
-        }
-    })
+				$scope.$watch('model.signatureValue', function() {
+						if ($scope.model.signatureValue) $scope.signatureApi.regenerate($scope.model.signatureValue);
+						else $scope.signatureApi.clearCanvas();
+					})
+
+				$scope.$watch(function() {
+						return $element.find('canvas').attr('width');
+					}, function() {
+						if ($scope.model.signatureValue) $scope.signatureApi.regenerate($scope.model.signatureValue);
+					})
+
+				$scope.$watch(function() {
+						return $element.find('canvas').attr('height');
+					}, function() {
+						if ($scope.model.signatureValue) $scope.signatureApi.regenerate($scope.model.signatureValue);
+					})
+
+				$scope.signatureApi = $element.signaturePad(options);
+
+				$scope.clear = function() {
+					$scope.model.signatureValue = null;
+					$scope.svyServoyApi.apply('signatureValue');
+				}
+			}
+		}
+	})
