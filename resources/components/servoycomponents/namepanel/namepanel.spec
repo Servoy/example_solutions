@@ -7,17 +7,18 @@
 	{
 		"bgcolor": "color",
 	    "firstNameDataprovider": "dataprovider",
-	    "firstNameTabsequence": {"type": "tabseq","scope": "design"},
+	    "firstNameTabsequence": {"type": "tabseq", "tags": { "scope": "design" }},
 	    "lastNameDataprovider": "dataprovider",
-	    "lastNameTabsequence": {"type": "tabseq","scope": "design"},
+	    "lastNameTabsequence": {"type": "tabseq", "tags": { "scope": "design" }},
 		"buttontext": {"type":"string", "default":"button"},
 		"buttonClass": { "type":"styleclass", "values":["btn","btn-default","btn-lg","btn-sm","btn-xs"]},
 		"cssClasses" : { "type":"styleclass", "default":"table"},
 		"tooltiptext": "string",
-		"readOnly": "boolean",
+		"readOnly": "protected",
+		"visible": "visible",
 		"size" : {"type" :"dimension",  "default" : {"width":230, "height":120}}, 
 	    "firstNameFormat": {"for":"firstNameDataprovider" , "type":"format"},
-	    "testruntime": { "type": "string", "scope":"runtime"}
+	    "testruntime": { "type": "string", "tags": { "scope":"runtime" }}
 	},
 	"handlers":
 	{

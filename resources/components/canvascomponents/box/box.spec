@@ -10,7 +10,7 @@
 	        "bgimagestyle" : { "type" :"styleclass"}, 
 	        "nextstyle" : { "type" :"styleclass"}, 
 	        "title" : { "type":"tagstring" },
-	        "value" : { "type":"dataprovider", "scope" :"design"}
+	        "value" : { "type":"dataprovider", "tags": { "scope" :"design" }}
 	},
 	"handlers":
 	{

@@ -7,7 +7,7 @@
 	"model":
 	{
 	        "styleClass" : { "type" :"styleclass"}, 
-	        "dataProviderID" : { "type":"dataprovider", "scope" :"design"},
+	        "dataProviderID" : { "type":"dataprovider", "tags": { "scope" :"design" }},
 	        "markupId" : "string"
 	}
 }

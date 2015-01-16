@@ -9,7 +9,7 @@
 	],
 	"model":
 	{
-		"dataProviderID" : { "type":"dataprovider", "scope" :"design"},
+		"dataProviderID" : { "type":"dataprovider", "tags": { "scope" :"design" }},
 		"styleClass" : { "type" :"styleclass"}
 	}
 }
