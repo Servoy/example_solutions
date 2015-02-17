@@ -1,0 +1,16 @@
+<div id="{{::model.svyMarkupId}}" svy-border='model.borderType' 
+	class="form-control input-sm svy-padding-xs" style="width: 100%; height: 100%; overflow: hidden">
+
+	<div ng-repeat="row in model.myfoundset.viewPort.rows">
+		<div ng-class="{'blue_age': model.myconfiguration.mydataprovider[$index] >= model.myconfiguration.ageBoundary,'yellow_age': model.myconfiguration.mydataprovider[$index] < model.myconfiguration.ageBoundary}">
+			Name: [{{model.myconfiguration.mytagstring[$index]}}]; Age: [{{model.myconfiguration.mydataprovider[$index]}}]
+			<br/>
+			{{model.myconfiguration.statictagstring[$index]}}
+		</div>
+		<input class='svy-textfield svy-field form-control input-sm svy-padding-xs'
+			   type="text" 
+		       ng-model="model.myconfiguration.toeditdataprovider[$index]"
+		       svy-autoapply/>
+	</div>
+
+</div>
