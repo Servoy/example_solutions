@@ -17,7 +17,7 @@
 		"readOnly": "protected",
 		"visible": "visible",
 		"size" : {"type" :"dimension",  "default" : {"width":230, "height":120}}, 
-	    "firstNameFormat": {"for":"firstNameDataprovider" , "type":"format"},
+	    "firstNameFormat": {"for":["firstNameDataprovider"] , "type":"format"},
 	    "testruntime": { "type": "string", "tags": { "scope":"runtime" }}
 	},
 	"handlers":
