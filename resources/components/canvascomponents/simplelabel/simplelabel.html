@@ -1,4 +1,4 @@
 <div id="{{model.markupId}}" 
-	  ng-bind-html='model.dataProviderID| htmlFilter'
+	  ng-bind-html='model.dataProviderID | htmlFilter | trustAsHtml:servoyApi.trustAsHtml()'
 	   ng-class="model.styleClass">
 </div> 

@@ -3,7 +3,8 @@ angular.module('canvascomponentsSimplelabel',['servoy']).directive('canvascompon
       restrict: 'E',
       scope: {
         model: "=svyModel",
-       	handlers: "=svyHandlers"
+       	handlers: "=svyHandlers",
+		servoyApi: "=svyServoyapi"
       },
       controller: function($scope, $element, $attrs) {
       },
